@@ -1,0 +1,60 @@
+  + chép lab10/guards_round1.py -> submission/code/guards_round1.py
+  + chép lab10/guards.py -> submission/code/guards.py
+  + chép lab10/monitors.py -> submission/code/monitors.py
+  + chép config/operating_gates.round1.json -> submission/config/operating_gates.round1.json
+  + chép config/operating_gates.json -> submission/config/operating_gates.json
+  + chép config/switches.json -> submission/config/switches.json
+  + chép config/acceptance_criteria.json -> submission/config/acceptance_criteria.json
+  + chép config/acceptance_criteria.lock -> submission/config/acceptance_criteria.lock
+  + chép config/round1.lock -> submission/config/round1.lock
+  + chép templates/form-a-criteria.md -> submission/docs/form-a-criteria.md
+  + chép templates/form-b-evaluation-gates.md -> submission/docs/form-b-evaluation-gates.md
+  + chép templates/form-c-incident.md -> submission/docs/form-c-incident.md
+  + chép runs/journal.jsonl -> submission/runs/journal.jsonl
+  + ghi submission/manifest.json (601 file)
+
+KIỂM BÀI NỘP (submission/) · đây là kiểm ĐỦ THÀNH PHẦN, không phải chấm điểm
+
+  [ĐỦ  ] submission/submission.json đọc được
+  [ĐỦ  ] tên bàn (`team`): K5-L3B-DAY10-OneManArmySweep-PoCtoPilotGate1
+  [ĐỦ  ] thành viên (`members`): 1 người
+  [THIẾU] số thẻ đã bốc (`incident`): (trống)
+          -> điền số thẻ bàn bốc được, ví dụ "S3"
+  [ĐỦ  ] quyết định v1 (`decision_v1`): Tiếp tục
+  [THIẾU] quyết định v2 (`decision_v2`): (trống)
+          -> điền một trong: Tiếp tục / Thu hẹp / Cải tiến thêm / Dừng
+  [THIẾU] ba dòng bắt buộc · giả định về môi trường (`three_lines.environment_assumption`)
+          -> viết một câu đầy đủ (từ 15 ký tự)
+  [THIẾU] ba dòng bắt buộc · giảm hay ngăn, vì sao (`three_lines.reduce_or_prevent`)
+          -> viết một câu đầy đủ (từ 15 ký tự)
+  [THIẾU] ba dòng bắt buộc · cần đo lại gì trong pilot thật (`three_lines.measure_in_pilot`)
+          -> viết một câu đầy đủ (từ 15 ký tự)
+  [ĐỦ  ] có file submission/code/guards_round1.py
+  [ĐỦ  ] có file submission/code/guards.py
+  [ĐỦ  ] có file submission/code/monitors.py
+  [ĐỦ  ] có file submission/config/operating_gates.round1.json
+  [ĐỦ  ] có file submission/config/operating_gates.json
+  [ĐỦ  ] có file submission/config/switches.json
+  [ĐỦ  ] có file submission/config/acceptance_criteria.json
+  [ĐỦ  ] có file submission/config/acceptance_criteria.lock
+  [ĐỦ  ] có file submission/config/round1.lock
+  [ĐỦ  ] tiêu chí trong bài nộp khớp hash đã ký (b6419b56)
+  [ĐỦ  ] tiêu chí giữ nguyên từ commit 'Sign acceptance criteria'
+  [ĐỦ  ] cổng vòng 1 trong bài nộp khớp bản đã chốt (244f5db1)
+  [ĐỦ  ] config cổng (operating_gates.json) dùng được
+  [ĐỦ  ] cổng con người đã điền: PIC, người duyệt, kênh báo tin, điều kiện dừng
+  [THIẾU] có báo cáo tự kiểm tra (runs/grade-report.json)
+          -> điền `incident` trong submission.json, chạy `python3 -m lab10.grade --incident Sx`, rồi --collect lại
+  [ĐỦ  ] phiếu docs/form-a-criteria.md đã điền
+  [ĐỦ  ] phiếu docs/form-a-criteria.md: mọi mục đều đã điền
+  [ĐỦ  ] phiếu docs/form-b-evaluation-gates.md đã điền
+  [ĐỦ  ] phiếu docs/form-b-evaluation-gates.md: mọi mục đều đã điền
+  [THIẾU] phiếu docs/form-c-incident.md đã điền
+          -> điền templates/form-c-incident.md rồi --collect lại
+  [THIẾU] dòng 'Thẻ đã bốc' trong form-c-incident.md: (trống)
+          -> ghi đúng số thẻ vào dòng `Thẻ đã bốc:` ở đầu templates/form-c-incident.md rồi --collect lại
+  [ĐỦ  ] lần đánh giá đầu tiên (submission/runs/journal.jsonl): 2026-11-19T15:27:19; ký: 2026-11-19T15:17:04; commit ký: 2026-11-19T15:17:04
+  [ĐỦ  ] có submission/manifest.json
+  [ĐỦ  ] manifest khớp các file trong submission/
+
+CHƯA ĐỦ: còn 8 mục. Làm theo dòng '->' rồi chạy lại lệnh này.
