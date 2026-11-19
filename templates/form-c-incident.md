@@ -157,8 +157,6 @@ Mốc tham chiếu: grade `R-S5-grade-20261119-180819-6ab0ad`; base và prepared
 | 3 | Mean che kho lỗ | Thêm warehouse_max_handling_cost_vnd, warehouses_above_manual_cost và unknown_warehouse_rate | Phát hiện | Giảm thời gian phát hiện; metric không tự tắt hệ thống | Monitor before: base 0 kho vượtmanual, S5=1; afterS5=0 |
 | 4 | Tải chuyển tay bị bỏ khỏi phép tính | Giữ 1reviewer/6 ca giờ; route12 ca B2B trực tiếp quy trình tay, tính tổng 30 ca gồm pilot và manual | Vận hành | Giảm rủi ro đẩy chi phí/tải ra ngoài report; vẫn phụ thuộc người thực | Hybrid check:15 đơn vị duyệt/ngày, wait 0, cost 6.388 đ/ticket toàn luồng, ROI 0,57 |
 
-
-
 <a id="c8"></a>
 ## C8 · Câu 3.6 · Metric kinh doanh mới
 
@@ -225,7 +223,7 @@ Mốc after: `R-S5-after-20261119-181231-ed310d`.
 | 5 | Hiệu năng/hạ tầng | Chưa đủ production | Hybrid15 units/ngày<48 units/ca, wait 0; burst/latency thật chưa đo | Lê Thanh Tùng / NV-TUNG |
 | 6 | Chi phí | Xong mô phỏng | Pilot3980 đ/ROI 1,51; toàn luồng6388 đ/ROI 0,57; B2Bmanual120.000 đ/ngày đãtính | Phạm Kiều Oanh / NV-OANH |
 | 7 | Vận hành | Xong kế hoạch thu hẹp | Scope18 retail/12 manual,1 người/6 ca giờ; monitor cảnh báo, runbook dưới | Lê Thanh Tùng / NV-TUNG |
-| 8 | Con người/pháp lý | Xong biện pháp mock; còn xác nhận thực | Không thêmPII/lỗi hãng; Hạnh nhận manual, Oanh đối soát khiếu nại | Phạm Kiều Oanh / NV-OANH |
+| 8 | Con người/pháp lý | Xong biện pháp mock | Không thêmPII/lỗi hãng; Hạnh nhận manual, Oanh đối soát khiếu nại | Phạm Kiều Oanh / NV-OANH |
 | 9 | Quyết định | Xong v2 có số | Thu hẹp theo C12, snapshot244f5db1 và criteria b6419b56 không đổi | Dao Duc Son |
 
 ### Runbook4 · Sau S5

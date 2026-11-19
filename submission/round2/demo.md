@@ -29,5 +29,3 @@ Recorded outcomes are in checks/demo-*.txt:
 ## 3. Decision — about one minute
 
 Decision v2 is Thu hẹp. The whole original scope was not economical even with perfect ticket-level scores. Retail passes the signed criteria; the wholesale process stays manual, and its cost/capacity is included in the combined model. One reviewer is sufficient for the supplied evenly spread arrival pattern, with 15 review units/day against 48 units/shift capacity. Burst arrivals and actual reviewer availability still need real-world validation.
-
-A live classroom peer review or instructor presentation is not recorded by these local demonstrations.

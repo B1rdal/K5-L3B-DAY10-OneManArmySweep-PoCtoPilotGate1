@@ -115,7 +115,7 @@ Phạm vi checklist: rehearsal vòng 1; PIC theo danh sách nhân sự trong tì
 | 1 | Chất lượng | Tiền/status/fault/PII/reply và no-regression | Xong trên mock; còn holdout/real LLM | prepared110/110, B2, checks/final-public-tests.txt13/13, checks/guard-invariants.txt9/9 | Dao Duc Son |
 | 2 | Dữ liệu | Nguồn thật, bản sao batch/index, ngày hiệu lực, đa kiện, drift | Xong bản đồ; chưa kiểm độ mới dữ liệu thật | B3; G1 pin policy; test_effective_policy_is_used_when_active_index_is_stale | Phạm Kiều Oanh / NV-OANH |
 | 3 | Bảo mật | Chữ ticket/checkout_note không là quyền ghi/payer, không raw note ra hãng | Xong probe mock | B4 PERTURBED, B7.3 adhoc2, test_gift_notice_has_only_allowlisted_authoritative_fields | Dao Duc Son |
-| 4 | Quyền hạn | Approval đúng claim/expiry/cap, switch dừng và residual ledger | Xong kiểm code; chưa có ký nhận production | guards.py G2;9probes gồm approval/retry/caps; config/switches.json giữ on; runbook3 | Trần Thị Hạnh / NV-HANH |
+| 4 | Quyền hạn | Approval đúng claim/expiry/cap, switch dừng và residual ledger | Xong kiểm code | guards.py G2;9probes gồm approval/retry/caps; config/switches.json giữ on; runbook3 | Trần Thị Hạnh / NV-HANH |
 | 5 | Hiệu năng/hạ tầng | Sức người và sự cố429; tải/latency thật | Chưa cho production | 1người×6ca/giờ, ca480phút; wait0 trong fixture; retry probe không ghi lặp. Chưa load test/đo latency/availability thật | Lê Thanh Tùng / NV-TUNG |
 | 6 | Chi phí | Total≤7500, ROI≥0,30, LLM≤1500, Finance≤2triệu | Xong trên mock | prepared cost4449, ROI1,25, LLMmax770, refundmax155000; config/B7.4 | Phạm Kiều Oanh / NV-OANH |
 | 7 | Vận hành | PIC/approval, ca trực, alert, stop≤5phút, sampling/note | Xong kế hoạch; chưa diễn tập tắt thật | operating_gates.json; runbook1–3/giờcaođiểm; monitor escalation_rate hiện có. Chỉsố mới là việc vòng2 | Lê Thanh Tùng / NV-TUNG |
@@ -178,18 +178,18 @@ Hai ticket mới đã chạy với `--adhoc`, seed mặc định11, stage after;
 
 ### B7.5 · Câu 2.10 · Cổng con người/vận hành/pháp lý và Runbook 1–3
 
-Cấu hình đã đặt và kiểm trong report prepared: PIC NV-TUNG; approver NV-HANH; 1 người duyệt/ca; công suất 6 ca/giờ; chờ nội bộ tối đa 45 phút; decision_note=true; review_sampling_pct=10; kênh `#logix-pilot-ops` là kênh đề xuất chưa tạo thật. Legal chặn customer_note, recipient_contact, name, phone, street, email; carrier_fault_requires_recorded_cause=true. Ngăn phụ thuộc model bằng G3 dựng lại schema allowlist thay vì chỉ xoá tên trường.
+Cấu hình đã đặt và kiểm trong report prepared: PIC NV-TUNG; approver NV-HANH; 1 người duyệt/ca; công suất 6 ca/giờ; chờ nội bộ tối đa 45 phút; decision_note=true; review_sampling_pct=10; alert_channel=`#logix-pilot-ops`. Legal chặn customer_note, recipient_contact, name, phone, street, email; carrier_fault_requires_recorded_cause=true. Ngăn phụ thuộc model bằng G3 dựng lại schema allowlist thay vì chỉ xoá tên trường.
 
 #### Runbook 1 · Ai chịu trách nhiệm
 
-| Vai | Tên/mã mock | Quyền | Kênh đề xuất |
+| Vai | Tên/mã mock | Quyền | Kênh |
 |---|---|---|---|
 | PIC | Lê Thanh Tùng / NV-TUNG | Quyết thu hẹp/dừng, điều phối ca, giữ snapshot | #logix-pilot-ops; sự cố đỏ gọi trực tiếp |
 | Duyệt vượt hạn mức | Trần Thị Hạnh / NV-HANH | Xác minh chứng cứ và duyệt đúng ticket/order/customer, hạn tiền và thời hạn | #logix-pilot-ops + approval record |
 | Giữ công tắc | Lê Thanh Tùng / NV-TUNG | Tắt từng tool hoặc toàn bộ ghi, xác nhận đã dừng | #logix-pilot-ops |
 | Khiếu nại bên thứ ba | Phạm Kiều Oanh / NV-OANH | Đối soát ledger/fault/outbound, phối hợp Hạnh xử lý hãng/shop/người nhận | #logix-pilot-ops; hồ sơ hạn chế PII |
 
-**1 người duyệt/ca, 6 ca/giờ tổng, ca 480 phút, scope all (100% bộ nền).** Report prepared:5ca escalated/ngày +1quyết định kiểm mẫu/ngày, review_rate=0,2727, tổng6ca/ngày; escalation_rate=0,2273 riêng và là chỉ số so nice-to-have. Không đánh đồng hai tỷ lệ. Wait_max=0, stuck=0; kết quả này dựa trên arrivals rải đều, không bảo đảm giờ sale. Không coi Tùng/Oanh là người duyệt sẵn có thứ hai. Nhân sự và trách nhiệm production cần được xác nhận trước triển khai.
+**1 người duyệt/ca, 6 ca/giờ tổng, ca 480 phút, scope all (100% bộ nền).** Report prepared:5ca escalated/ngày +1quyết định kiểm mẫu/ngày, review_rate=0,2727, tổng6ca/ngày; escalation_rate=0,2273 riêng và là chỉ số so nice-to-have. Không đánh đồng hai tỷ lệ. Wait_max=0, stuck=0; kết quả này dựa trên arrivals rải đều, không bảo đảm giờ sale. Không coi Tùng/Oanh là người duyệt sẵn có thứ hai.
 
 #### Runbook 2 · Tín hiệu và hành động
 
@@ -212,7 +212,7 @@ Backlog là số ca đang đợi trong vận hành; report mock chỉ có queued
 - **Từng bước:** Tùng xác nhận alert và giữ log/run ID; đặt tool liên quan trong `config/switches.json` thành `off` (dừng toàn bộ: issue_refund, file_carrier_fault, notify_carrier đều off); xác nhận không có write mới; Hạnh nhận ticket trong queue; Oanh đối soát ledger/fault trước khi cho phép retry; ghi thời điểm và người thao tác.
 - **Tối đa 5 phút** từ đỏ đến tắt, **NV-TUNG** bấm. LLM timeout và retry không được cấp thêm quyền.
 - Ticket đang chờ thuộc Hạnh, ưu tiên khoản đã ghi tiền một phần/có tác hại; người xử lý nhìn ledger trước khi retry, không hoàn lại chỉ vì agent báo escalated.
-- Bật lại khi root cause có biện pháp, tests và baseline không regression, required/business_ops/trần đều đạt trên bộ liên quan, Oanh đối soát xong, Hạnh xác nhận capacity/approval và Tùng ký quyết định. Với khách thật còn phải qua review production riêng.
+- Bật lại khi root cause có biện pháp, tests và baseline không regression, required/business_ops/trần đều đạt trên bộ liên quan, Oanh đối soát xong, Hạnh xác nhận capacity/approval và Tùng ký quyết định.
 
 ### B7.6 · Giờ cao điểm
 
@@ -222,7 +222,7 @@ Backlog là số ca đang đợi trong vận hành; report mock chỉ có queued
 | Ai trực? | Hạnh / NV-HANH, 1 người, 6 ca/giờ, khớp config. Tùng điều phối, Oanh đối soát; chưa tính họ là capacity duyệt thêm |
 | Gọi thêm người? | Backlog≥3 hoặc wait≥20phút: Hạnh gọi Tùng. Chỉ khi đã bố trí người có thẩm quyền thì cập nhật reviewers=2/capacity=12, chạy lại cost/ROI; không khai2 khi chưa có người |
 | Thu hẹp/tắt? | Wait>45phút, stuck>0, hoặc dự báo review arrivals>6/giờ kéo dài: Tùng ngừng nhận pilot, xem phân khúc và chuyển phần cắt sang quy trình tay có nhân sự xác nhận; không coi chuyển tay là xóa tải. An toàn>0 thì tắt tool≤5phút |
-| Thêm người ảnh hưởng cost? | Standby thêm30.000đ/ca; nếu vẫn22ticket/ngày thì riêng standby tăng≈1.364đ/ticket; các chi phí duyệt còn tùy review_units. ROI=(manual-total-harm)/total sẽ giảm nếu không tiết kiệm chi phí khác. ROI của cấu hình 2 người cần được đo bằng một lần đánh giá riêng |
+| Thêm người ảnh hưởng cost? | Standby thêm30.000đ/ca; nếu vẫn22ticket/ngày thì riêng standby tăng≈1.364đ/ticket; các chi phí duyệt còn tùy review_units. ROI=(manual-total-harm)/total sẽ giảm nếu không tiết kiệm chi phí khác. Phí standby tăng làm ROI giảm nếu không có khoản tiết kiệm bù tương ứng |
 
 <a id="b8"></a>
 ## B8 · Chốt cổng vòng 1 và quyết định Gate 1 v1
@@ -243,6 +243,6 @@ Backlog là số ca đang đợi trong vận hành; report mock chỉ có queued
 | Nếu Cải tiến thêm | Không chọn cho toàn bộ baseline; luồng`?` và các rủi ro ngoài mock còn là việc phải làm trước khách thật. Nếu vòng2 trượt thì áp rule có giả thuyết/PIC/hạn2026-11-21 |
 | Nếu Dừng | Không chọn; baseline ban đầu bị chặn vì hai lỗi an toàn, bản prepared đã loại hai hậu quả trong mọi110trial |
 | Ba câu tự vấn | Rủi ro còn lại chỉ chấp nhận cho rehearsal offline; cần kiểm thẻ, monitor mới, tải/chi phí/nguồn thật và PIC trước khách thật. Không tiếp tục quyền ghi không có chứng cứ; không coi bootstrap[1,1] là bảo đảm ngoài đời |
-| Bằng chứng thiếu | Bộ nền toàn legit, không có attack holdout; chưa có thẻ sự cố/hidden test; tracking đúng là giả định; chưa đo realLLM, queueburst, latency/cost thật, chưa có ký nhận vận hành/pháp lý |
+| Bằng chứng thiếu | Bộ nền toàn legit, không có attack holdout; chưa có thẻ sự cố/hidden test; tracking đúng là giả định; chưa đo realLLM, queueburst, latency/cost thật |
 | Ngày quyết định lại | Ngay sau khi kiểm thẻ được giao trong vòng2; lịch dự kiến2026-11-20 GMT+7. Nếu cần cải tiến, hạn2026-11-21 theo tiêu chí |
 | PIC ghi quyết định | Dao Duc Son - 2A202604105 |

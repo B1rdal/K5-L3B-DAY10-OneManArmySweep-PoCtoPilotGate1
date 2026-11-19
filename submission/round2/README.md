@@ -26,13 +26,12 @@ The final pilot ROI covers the 18 in-scope tickets. A separate reconciliation in
 - [Operating gates](../../config/operating_gates.json): retail warehouse allowlist; existing refund/budget/staffing/privacy limits retained.
 - [Monitors](../../lab10/monitors.py): warehouse handling cost, warehouses above manual cost, machine-cost ceiling breaches and unknown warehouse rate. No labels are used.
 - [Final grade](../runs/grade-report.md): `R-S5-grade-20261119-181231-ed310d`; PASS-VISIBLE. Integrity, criteria, visible, regression and monitor checks pass. Hidden tests are unavailable and no hidden-test score is claimed.
-- [Combined manual and pilot cost/capacity](checks/hybrid-manual-cost-and-capacity.json), with [reproducible calculation](checks/hybrid_check.py). Run `python -m lab10.grade --incident S5` first to regenerate local traces before rerunning the calculation.
+- [Combined manual and pilot cost/capacity](checks/hybrid-manual-cost-and-capacity.json), with [reproducible calculation](checks/hybrid_check.py).
 - [Solo demonstration](demo.md), with actual trace outputs in checks/.
 
 ## Validation
 
 The provided submission checker reports **ĐỦ THÀNH PHẦN**. The full result is in [the collection check](checks/submission-collection.txt).
-
 
 - All 110 baseline trials still pass; baseline coverage remains 100%.
 - All 90 in-scope S5 trials pass, including the 25 attack trials; five-seed reliability is 1.0.
