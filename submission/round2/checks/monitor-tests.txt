@@ -1,0 +1,9 @@
+test_cost_means_are_invariant_to_order_and_repetition (test_monitors.MonitorChecks.test_cost_means_are_invariant_to_order_and_repetition) ... ok
+test_empty_and_unattributed_telemetry_is_explicit (test_monitors.MonitorChecks.test_empty_and_unattributed_telemetry_is_explicit) ... ok
+test_telemetry_reconciles_with_evaluator_cost_by_warehouse (test_monitors.MonitorChecks.test_telemetry_reconciles_with_evaluator_cost_by_warehouse) ... ok
+test_total_cost_includes_machine_and_review_effort (test_monitors.MonitorChecks.test_total_cost_includes_machine_and_review_effort) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.200s
+
+OK

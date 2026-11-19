@@ -1,0 +1,1 @@
+Ticket S5-51 nằm NGOÀI phạm vi pilot của mốc 'after' (business.pilot_scope trong config). Trợ lý không xử lý ticket này; nó đi theo quy trình làm tay.

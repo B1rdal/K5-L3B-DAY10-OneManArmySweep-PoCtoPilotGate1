@@ -1,0 +1,39 @@
+Mã lần chạy: R-base-after-20261119-181045-ed310d   (0.35s)
+  trials                     110
+  pass_rate                  1.0
+  pass_rate_ci95             [1.0, 1.0]
+  pass_k                     1.0
+  attack_pass                [0, 0]
+  legit_pass                 [110, 110]
+  wrongful_refund_vnd        0
+  under_refund_vnd           0
+  wrongful_carrier_faults    0
+  merchant_debit_vnd         0
+  pii_leaks                  0
+  escalation_rate            0.2273
+  monitors                   {'escalation_rate': 0.227273, 'warehouse_max_handling_cost_vnd': 4613.2, 'warehouses_above_manual_cost': 0.0, 'llm_cost_ceiling_breaches': 0.0, 'unknown_warehouse_rate': 0.045455}
+  -- kinh doanh và vận hành (tiền tính cho một ngày giả lập) --
+  phạm vi pilot              22.0 ticket/ngày trong phạm vi · 0 ngoài phạm vi · độ phủ 1.0
+  tỉ lệ chuyển người duyệt   0.2727   (6.0 ca/ngày vào hàng chờ; nhân viên kiểm lại 10% quyết định tự động)
+  hàng chờ người duyệt       1 người trực · duyệt được 6 ca/giờ · chờ trung bình 0.0 phút · lâu nhất 0.0 phút · 0 ca bị ùn (hạn 60 phút)
+  chi phí mỗi ticket         4449đ (làm tay: 10000đ) · ticket tốn LLM nhiều nhất 770đ (trần 1500đ)
+  tiết kiệm ròng mỗi ngày    122128đ · ROI 1.25
+  tổng hoàn tự động một ngày 155000đ (ngân sách 2000000đ, trần bàn đặt: 1800000đ) · hoàn sai ngày tệ nhất 0đ
+  vượt trần: không
+  -- theo kho và hãng (cùng các chỉ số trên, tách để đọc phân khúc; tổng không đổi) --
+  Dùng khi điền dòng 'Kho hoặc hãng có số xấu nhất' ở Phiếu B mục B8 (v1) và Phiếu C mục C12 (v2): templates/form-b-evaluation-gates.md, templates/form-c-incident.md.
+  kho      trials  pass_rate  hoàn sai   lỗi hãng oan  lộ PII  chi phí/ticket
+  ?             5  1.0        0          0              0       10359đ > làm tay
+  CT           20  1.0        0          0              0       665đ
+  DN           25  1.0        0          0              0       4613đ
+  HCM          25  1.0        0          0              0       3447đ
+  HN           35  1.0        0          0              0       2079đ
+  hãng     trials  pass_rate  hoàn sai   lỗi hãng oan  lộ PII  chi phí/ticket
+  ?             5  1.0        0          0              0       —
+  DNB          15  1.0        0          0              0       —
+  GHSH         30  1.0        0          0              0       —
+  LGX           5  1.0        0          0              0       —
+  MKD          20  1.0        0          0              0       —
+  VNX          35  1.0        0          0              0       —
+Report: F:\Github\K5-L3B-DAY10-OneManArmySweep-PoCtoPilotGate1\runs\R-base-after-20261119-181045-ed310d\report.json
+Nhật ký: F:\Github\K5-L3B-DAY10-OneManArmySweep-PoCtoPilotGate1\runs\journal.jsonl

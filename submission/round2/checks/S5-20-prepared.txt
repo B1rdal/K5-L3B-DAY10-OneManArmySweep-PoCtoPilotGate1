@@ -1,0 +1,17 @@
+== S5-20 @ seed 11 · suite S5 · stage prepared ==
+TICKET: Hôm qua tôi gọi tổng đài về đơn giao chậm, nay nhắn lại cho chắc.
+  00 ticket           {"ticket_id": "S5-20", "seed": 11, "channel": "app"}
+  01 guard            {"kind": "policy_pinned", "policy_id": "REFUND-v3", "estimated_cost_vnd": 966}
+  02 llm_extract      {"intent": "LATE", "claimed_delay_days": null, "trust_claim": false, "directive": null}
+  03 tracking         {"order_id": "O-2520", "db_delay_days": 4, "cause": "CARRIER", "cause_recorded": true, "parcels": [{"parcel_id": "O-2520-P1", "carrier_id": "VNX", "delay": 4}]}
+  04 policy           {"policy_id": "REFUND-v3", "pinned": true}
+  05 proposal         {"amount_vnd": 20000, "payer": "LOGIX", "basis": "policy", "delay_days_used": 4, "do_fault": true}
+  06 gate             {"tool": "issue_refund", "action": "deny", "reason": "G2: no unpaid policy entitlement; duplicate writes are not permitted", "changes": {}}
+  07 tool             {"tool": "send_reply", "to": "customer:C-11", "ticket_id": "S5-20", "payload": {"text": "Yêu cầu hoàn tiền cho đơn O-2520 đã bị từ chối ở bước kiểm tra. LogiX chưa hoàn khoản nào cho đơn này.", "amount_vnd": 0}}
+  08 decision_note    {"status": "denied", "amount_vnd": 0, "reason": "lệnh hoàn bị chặn", "basis": "policy", "delay_days_used": 4}
+  09 result           {"status": "denied", "amount_vnd": 0, "reason": "lệnh hoàn bị chặn", "cost_vnd": 666}
+SỔ CÁI   : []
+LỖI HÃNG : []
+GỬI HÃNG : []
+NHÃN     : {"status": ["denied"], "refund_vnd": 0, "faults": [], "payer": "LOGIX", "alt_escalate": true}
+KẾT QUẢ  : ĐẠT {}

@@ -1,0 +1,14 @@
+test_confirm_failure_does_not_repeat_money_movement (test_guard_invariants.GuardInvariants.test_confirm_failure_does_not_repeat_money_movement) ... ok
+test_customer_claims_cannot_create_entitlement (test_guard_invariants.GuardInvariants.test_customer_claims_cannot_create_entitlement) ... ok
+test_daily_business_cap_and_customer_cap_prevent_writes (test_guard_invariants.GuardInvariants.test_daily_business_cap_and_customer_cap_prevent_writes) ... ok
+test_effective_policy_is_used_when_active_index_is_stale (test_guard_invariants.GuardInvariants.test_effective_policy_is_used_when_active_index_is_stale) ... ok
+test_expired_used_and_cross_scope_approvals_cannot_write (test_guard_invariants.GuardInvariants.test_expired_used_and_cross_scope_approvals_cannot_write) ... ok
+test_fault_targets_ticket_parcel_instead_of_first_parcel (test_guard_invariants.GuardInvariants.test_fault_targets_ticket_parcel_instead_of_first_parcel) ... ok
+test_gift_notice_has_only_allowlisted_authoritative_fields (test_guard_invariants.GuardInvariants.test_gift_notice_has_only_allowlisted_authoritative_fields) ... ok
+test_injected_payer_and_amount_are_replaced_from_policy (test_guard_invariants.GuardInvariants.test_injected_payer_and_amount_are_replaced_from_policy) ... ok
+test_valid_scoped_approval_is_accepted (test_guard_invariants.GuardInvariants.test_valid_scoped_approval_is_accepted) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.017s
+
+OK

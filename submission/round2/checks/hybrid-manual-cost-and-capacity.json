@@ -1,0 +1,67 @@
+{
+  "source_run_id": "R-S5-after-20261119-181045-ed310d",
+  "pilot_tickets_per_day": 18.0,
+  "direct_manual_tickets_per_day": 12,
+  "direct_manual_cost_per_day_vnd": 120000,
+  "manual_routing_assumption": "Wholesale tickets bypass the assistant and are modeled as one manual review unit at the reference 10000 VND rate.",
+  "manual_refund_accuracy_measured": false,
+  "combined_cost": {
+    "cost_per_ticket_vnd": 6388,
+    "manual_cost_per_ticket_vnd": 10000,
+    "agent_cost_per_day_vnd": 11643,
+    "review_cost_per_day_vnd": 150000,
+    "standby_cost_per_day_vnd": 30000,
+    "wrongful_refund_per_day_vnd": 0,
+    "net_saving_per_day_vnd": 108357,
+    "roi": 0.57,
+    "llm_cost_max_per_ticket_vnd": 765,
+    "llm_cost_ceiling_vnd": 1500
+  },
+  "combined_queue": {
+    "reviewers_on_shift": 1,
+    "capacity_per_hour": 6.0,
+    "sla_minutes": 60,
+    "queued_per_day": 15.0,
+    "wait_avg_min": 0.0,
+    "wait_max_min": 0.0,
+    "stuck": 0,
+    "recheck_pct": 10,
+    "trust": "không áp dụng",
+    "trust_why": []
+  },
+  "combined_segments": {
+    "CT": {
+      "tickets_per_day": 3.0,
+      "cost_per_ticket_vnd": 764,
+      "review_rate": 0.0,
+      "worse_than_manual": false
+    },
+    "DN": {
+      "tickets_per_day": 5.0,
+      "cost_per_ticket_vnd": 743,
+      "review_rate": 0.0,
+      "worse_than_manual": false
+    },
+    "HCM": {
+      "tickets_per_day": 2.0,
+      "cost_per_ticket_vnd": 712,
+      "review_rate": 0.0,
+      "worse_than_manual": false
+    },
+    "HCM-B2B": {
+      "tickets_per_day": 12.0,
+      "cost_per_ticket_vnd": 10000,
+      "review_rate": 1.0,
+      "worse_than_manual": false
+    },
+    "HN": {
+      "tickets_per_day": 8.0,
+      "cost_per_ticket_vnd": 4277,
+      "review_rate": 0.375,
+      "worse_than_manual": false
+    }
+  },
+  "combined_violations": [],
+  "original_all_scope_cost_per_day_vnd": 196230,
+  "savings_vs_prepared_all_scope_vnd": 4587
+}

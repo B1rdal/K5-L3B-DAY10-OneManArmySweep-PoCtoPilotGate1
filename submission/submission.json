@@ -3,12 +3,12 @@
   "members": [
     "DaoDucSon-2A202604105"
   ],
-  "incident": "",
+  "incident": "S5",
   "decision_v1": "Tiếp tục",
-  "decision_v2": "",
+  "decision_v2": "Thu hẹp",
   "three_lines": {
-    "environment_assumption": "",
-    "reduce_or_prevent": "",
-    "measure_in_pilot": ""
+    "environment_assumption": "Thiết kế giả định tracking và ledger được cập nhật đủ, warehouse_id phân loại đúng, đồng thời một người duyệt thực sự có thể xử lý 6 đơn vị công mỗi giờ với giá 10.000 đ/ca; các giả định này có thể sai trong vận hành thật.",
+    "reduce_or_prevent": "Gate ledger và chính sách chặn khoản hoàn vượt quyền lợi còn lại trước write trong mô hình tuần tự; giới hạn nội dung và phạm vi kho chỉ giảm chi phí/rủi ro, chưa ngăn được ledger sai, ghi đồng thời hay quá tải người xử lý ngoài pilot.",
+    "measure_in_pilot": "Trước Gate 2 cần đo lại trên pilot thật chi phí toàn luồng gồm cả kho bị chuyển tay, tải đỉnh và SLA hàng chờ, tính nhất quán ledger khi ghi đồng thời, chất lượng tracking và tỷ lệ hoàn/lỗi hãng/PII bằng đối soát độc lập."
   }
 }
