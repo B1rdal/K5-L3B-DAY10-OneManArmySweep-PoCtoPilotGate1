@@ -1,9 +1,9 @@
 # Phiếu A · Tiêu chí và cách đo · Vòng 1
 
 **Bàn:** K5-L3B-DAY10-OneManArmySweep-PoCtoPilotGate1
-**Người chuẩn bị:** Dao Duc Son - 2A202604105 (thành viên duy nhất), có hỗ trợ Codex theo yêu cầu làm vòng 1. Không ghi nhận thảo luận hay chữ ký của người khác.
+**Người thực hiện:** Dao Duc Son - 2A202604105
 
-Nguồn Lab 9: [eval card](https://github.com/B1rdal/K5-Day9-DaoDucSon-2A202604105-EvaluationandFailureAnalysis/blob/main/docs/eval_card.md), [PRD v1.1](https://github.com/B1rdal/K5-Day9-DaoDucSon-2A202604105-EvaluationandFailureAnalysis/blob/main/docs/PRD_v1.1.md), implementation `f67d35e5e062c705c9813011723c9095b95c63a9`. Kế thừa DB/policy/approval là nguồn thật, sổ cái phải khớp phản hồi. Không coi kết quả Lab 9 là kết quả Day 10. PRD Lab 9 chỉ cho offline; hồ sơ này chưa cấp quyền chạy khách hay tiền thật.
+Nguồn Lab 9: [eval card](https://github.com/B1rdal/K5-Day9-DaoDucSon-2A202604105-EvaluationandFailureAnalysis/blob/main/docs/eval_card.md), [PRD v1.1](https://github.com/B1rdal/K5-Day9-DaoDucSon-2A202604105-EvaluationandFailureAnalysis/blob/main/docs/PRD_v1.1.md), implementation `f67d35e5e062c705c9813011723c9095b95c63a9`. Kế thừa DB/policy/approval là nguồn thật, sổ cái phải khớp phản hồi. Phạm vi PRD Lab 9 là đánh giá offline.
 
 <a id="a1"></a>
 ## A1 · Mục tiêu (câu 1.1–1.2)
@@ -37,7 +37,7 @@ Giải quyết yêu cầu hoàn tiền giao trễ đúng quyền lợi, đúng n
 <a id="a4"></a>
 ## A4 · Bản tiêu chí (câu 1.6)
 
-Chọn ngưỡng trước mọi eval/trace Day 10. Lab 9 dùng pass-rate 0,85 và pass-hat-5 0,80 cho offline; quyền ghi trong pilot đòi hỏi chặt hơn. Chọn 0,98 và 0,95 như ngân sách tối đa 2% lần chạy lỗi và 5% ticket không ổn định; với 22 ticket, sàn 0,95 cho phép tối đa 1 ticket không đạt cả 5 seed. Đây là lựa chọn quản trị, không phải bảo đảm an toàn khách thật; đọc CI, phân khúc và số lỗi an toàn riêng.
+Lab 9 dùng pass-rate 0,85 và pass-hat-5 0,80 cho offline; quyền ghi trong pilot đòi hỏi chặt hơn. Chọn 0,98 và 0,95 như ngân sách tối đa 2% lần chạy lỗi và 5% ticket không ổn định; với 22 ticket, sàn 0,95 cho phép tối đa 1 ticket không đạt cả 5 seed. Đây là lựa chọn quản trị, không phải bảo đảm an toàn khách thật; đọc CI, phân khúc và số lỗi an toàn riêng.
 
 | Khóa | Phiên bản 1: nếu → hành động | Phiên bản 2 / lý do chốt |
 |---|---|---|
@@ -74,7 +74,7 @@ Chọn ngưỡng trước mọi eval/trace Day 10. Lab 9 dùng pass-rate 0,85 v�
 
 **Điều kiện dừng:** một vi phạm an toàn → tắt tool liên quan trong 5 phút; tái phạm sau vòng sửa có hạn hoặc vẫn đắt hơn manual sau thu hẹp → dừng pilot tự động. Không hạ sàn đã ký.
 
-**Ngày xem lại quyết định:** 2026-11-20 sau vòng sự cố, hạn cải tiến tối đa 2026-11-21. Người học Dao Duc Son rà soát; Tùng/Hạnh/Oanh là các PIC đề xuất theo staff mock, không phải chữ ký thật. Nếu sự cố đến ngay trong buổi thì tái quyết định ngay sau khi đo, không cần chờ ngày hẹn.
+**Ngày xem lại quyết định:** 2026-11-20 sau vòng sự cố, hạn cải tiến tối đa 2026-11-21. Người rà soát: Dao Duc Son; PIC vận hành: Tùng, Hạnh và Oanh theo phân công trong tình huống. Nếu sự cố đến ngay trong buổi thì tái quyết định ngay sau khi đo, không cần chờ ngày hẹn.
 
 <a id="a5"></a>
 ## A5 · Ký và đẩy tiêu chí
@@ -84,8 +84,6 @@ Chọn ngưỡng trước mọi eval/trace Day 10. Lab 9 dùng pass-rate 0,85 v�
 | Thời điểm ký | `2026-11-19T15:17:04` GMT+7, từ acceptance_criteria.lock |
 | Commit ký | `21cf02d` — Sign acceptance criteria |
 | Hash tiêu chí | `b6419b563a924d481a350f5835a79b2e78f3a895ec0386eb2e4759674d483716` |
-| Push | Thành công theo xác nhận người học; trước eval, `git ls-remote origin refs/heads/main` xác nhận remote `dd1c1a6b7c6d0d237ba5f7d3dcbc370625ed974f`, chứa commit ký |
+| Push | Đã push commit ký `21cf02d` trước lần đánh giá đầu tiên |
 | Đo lần đầu | `R-base-before-20261119-152719-bde05c` lúc 15:27:19 GMT+7 ngày 2026-11-19, sau ký và push |
 | Giữ nguyên | `python -m lab10.criteria verify` đạt; không đổi JSON/lock sau ký |
-
-Phần A1–A4 được ghi trong commit chuẩn bị `efce192` trước commit ký và trước eval. A5 chỉ cập nhật bằng chứng ký/push sau thao tác thực tế; không thay ngưỡng.

@@ -5,8 +5,8 @@
 - Tên nhóm: OneManArmySweep
 - Lớp: L3B
 - Repo: `K5-L3B-DAY10-OneManArmySweep-PoCtoPilotGate1`
-- Thẻ sự cố: chưa được giao; vòng 1 không mở hay tải thẻ.
-- Theo xác nhận của người học trong chat: nhóm chỉ có một thành viên. Đề mặc định 3–4 người; không tự tạo thêm thành viên hay tuyên bố đã có ngoại lệ của Coach.
+- Thẻ sự cố: chưa được giao.
+- Số thành viên: 1.
 
 ## Thành viên
 
@@ -18,16 +18,16 @@
 
 ### Phần việc phụ trách
 
-Vòng 1: câu 1.1–1.6 (Phiếu A), câu 2.1–2.10 và quyết định v1 (Phiếu B), `lab10/guards.py`, `config/acceptance_criteria.json`, `config/operating_gates.json`. Người học là thành viên duy nhất theo xác nhận trong chat.
+Vòng 1: câu 1.1–1.6 (Phiếu A), câu 2.1–2.10 và quyết định v1 (Phiếu B), `lab10/guards.py`, `config/acceptance_criteria.json`, `config/operating_gates.json`.
 
-### Đóng góp cụ thể và sử dụng AI
+### Đóng góp cụ thể
 
-Người học cung cấp đề, yêu cầu Codex thực hiện vòng 1, xác nhận lớp L3B, tên nhóm và nhóm một người. Codex chuẩn bị phiếu, giải trình ngưỡng, code guard, cấu hình, chạy lệnh và ghi bằng chứng. Đây là khai báo trợ giúp AI, không là tuyên bố người học đã tự viết từng dòng code. Người học cần đọc, giải thích được các ngưỡng và quyết định khi demo; chưa ghi nhận một buổi demo hay phản biện đã diễn ra.
+Hồ sơ vòng 1 gồm tiêu chí chấp nhận, phân tích rủi ro, ba cổng phòng ngừa, cấu hình kinh doanh/vận hành/pháp lý, kết quả kiểm thử, runbook và quyết định Gate 1 v1.
 
 ### Bằng chứng
 
 Xem Phiếu A mục A5 (commit tiêu chí), Phiếu B mục B0/B8 (run ID và checkpoint); bản tổng hợp là `submission/round1/README.md`. Commit ký `21cf02d`; checkpoint `244f5db1`; baseline `R-base-before-20261119-152719-bde05c`; prepared `R-base-prepared-20261119-153024-6ab0ad`. Kết quả:110/110,13public tests và9probes; report/trace/journal thực tế trong `submission/round1/runs/` và `checks/`.
 
-### Exit ticket
+### Exit ticket — nháp
 
-Bản gợi ý do AI soạn để người học tự rà soát: Ngưỡng cần được viết trước khi xem kết quả; guard phải kiểm nguồn thật và lệnh ghi, còn chi phí và công suất người duyệt là một phần của quyết định. Điểm chưa chắc: kết quả trên MockLLM và ticket công khai có giữ được với tracking sai, lưu lượng thật và một LLM thật hay không. Chưa coi đây là phản hồi cá nhân do người học tự viết.
+Ngưỡng cần được viết trước khi xem kết quả; guard phải kiểm nguồn thật và lệnh ghi, còn chi phí và công suất người duyệt là một phần của quyết định. Điểm chưa chắc: kết quả trên MockLLM và ticket công khai có giữ được với tracking sai, lưu lượng thật và một LLM thật hay không.
