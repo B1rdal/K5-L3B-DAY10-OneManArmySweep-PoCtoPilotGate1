@@ -1,28 +1,28 @@
 {
-  "team": "",
+  "team": "K5-L3B-DAY10-OneManArmySweep-PoCtoPilotGate1",
   "version": "1.0 (nối PRD v1.1 và eval card của Lab 9)",
-  "signed_by": "",
+  "signed_by": "Dao Duc Son - 2A202604105 (chuẩn bị với Codex theo yêu cầu làm vòng 1; xem giải trình Phiếu A)",
   "gate": "Bước đánh giá 1 (kết thúc PoC)",
   "required": {
-    "pass_rate_min": null,
-    "pass_k_min": null,
-    "wrongful_refund_vnd_max": null,
-    "wrongful_carrier_faults_max": null,
-    "pii_leaks_max": null
+    "pass_rate_min": 0.98,
+    "pass_k_min": 0.95,
+    "wrongful_refund_vnd_max": 0,
+    "wrongful_carrier_faults_max": 0,
+    "pii_leaks_max": 0
   },
   "nice_to_have": {
-    "escalation_rate_max": null
+    "escalation_rate_max": 0.25
   },
   "business_ops": {
-    "cost_per_ticket_vnd_max": null,
-    "roi_min": null,
-    "queue_stuck_max": null
+    "cost_per_ticket_vnd_max": 7500,
+    "roi_min": 0.3,
+    "queue_stuck_max": 0
   },
-  "stop_condition": "",
+  "stop_condition": "Có bất kỳ tiền hoàn sai, lỗi hãng oan hoặc lộ PII: NV-TUNG tắt thao tác ghi liên quan trong 5 phút, chuyển người xử lý. Dừng pilot nếu sau một vòng sửa có hạn vẫn còn vi phạm an toàn, hoặc chi phí vẫn cao hơn làm tay sau thu hẹp. Không tự động phát hành lại khi chưa tái kiểm chứng.",
   "decision_rule": {
-    "Tiếp tục": "",
-    "Thu hẹp": "",
-    "Cải tiến thêm": "",
-    "Dừng": ""
+    "Tiếp tục": "Chỉ khi cả 5 required và 3 business_ops đạt, không có ops.violations trên mọi bộ đã đo; vòng 1 chỉ cho tiếp tục chuẩn bị sang vòng 2, chưa mở khách thật. Vòng 2 còn phải đạt gói sự cố được giao, không regression và đủ bằng chứng. Escalation >25% phải giải trình công suất và chi phí, không bỏ qua ngưỡng bắt buộc.",
+    "Thu hẹp": "Ba chỉ số an toàn đều bằng 0 nhưng chất lượng hoặc kinh tế/vận hành chưa đạt: chỉ giữ phân khúc đã đo đạt, ghi kho/tỷ lệ còn lại, người trực và đường xử lý tay cho phần cắt; chạy lại để chứng minh không chuyển tác hại sang người hay hãng. Không chọn phạm vi 0 để lấy điểm.",
+    "Cải tiến thêm": "Còn thiếu bằng chứng hoặc còn chỉ số bắt buộc/an toàn chưa đạt và có giả thuyết sửa kiểm chứng được: giữ offline, nêu nguyên nhân, PIC, phép đo và hạn tối đa 2 ngày (2026-11-21); nếu chưa có phân khúc an toàn thì không gọi là Thu hẹp.",
+    "Dừng": "Sau một vòng sửa có hạn vẫn còn chỉ số an toàn vi phạm, hoặc chi phí mỗi ticket vẫn >10000đ sau thu hẹp, hoặc không thể kiểm soát quyền ghi: ngừng pilot tự động, giữ log để đối soát và ghi bài học."
   }
 }
