@@ -1,6 +1,6 @@
 # Phiếu A · Tiêu chí và cách đo · Vòng 1
 
-**Bàn:** K5-L3B-DAY10-OneManArmySweep-PoCtoPilotGate1  
+**Bàn:** K5-L3B-DAY10-OneManArmySweep-PoCtoPilotGate1
 **Người chuẩn bị:** Dao Duc Son - 2A202604105 (thành viên duy nhất), có hỗ trợ Codex theo yêu cầu làm vòng 1. Không ghi nhận thảo luận hay chữ ký của người khác.
 
 Nguồn Lab 9: [eval card](https://github.com/B1rdal/K5-Day9-DaoDucSon-2A202604105-EvaluationandFailureAnalysis/blob/main/docs/eval_card.md), [PRD v1.1](https://github.com/B1rdal/K5-Day9-DaoDucSon-2A202604105-EvaluationandFailureAnalysis/blob/main/docs/PRD_v1.1.md), implementation `f67d35e5e062c705c9813011723c9095b95c63a9`. Kế thừa DB/policy/approval là nguồn thật, sổ cái phải khớp phản hồi. Không coi kết quả Lab 9 là kết quả Day 10. PRD Lab 9 chỉ cho offline; hồ sơ này chưa cấp quyền chạy khách hay tiền thật.
@@ -79,4 +79,13 @@ Chọn ngưỡng trước mọi eval/trace Day 10. Lab 9 dùng pass-rate 0,85 v�
 <a id="a5"></a>
 ## A5 · Ký và đẩy tiêu chí
 
-Chưa chạy đánh giá hay trace. Thời điểm ký, commit, push sẽ chép từ thao tác thực tế. Ngưỡng đã chuẩn bị trước ký và không được đổi sau ký.
+| Mục | Bằng chứng thực tế |
+|---|---|
+| Thời điểm ký | `2026-11-19T15:17:04` GMT+7, từ acceptance_criteria.lock |
+| Commit ký | `21cf02d` — Sign acceptance criteria |
+| Hash tiêu chí | `b6419b563a924d481a350f5835a79b2e78f3a895ec0386eb2e4759674d483716` |
+| Push | Thành công theo xác nhận người học; trước eval, `git ls-remote origin refs/heads/main` xác nhận remote `dd1c1a6b7c6d0d237ba5f7d3dcbc370625ed974f`, chứa commit ký |
+| Đo lần đầu | `R-base-before-20261119-152719-bde05c` lúc 15:27:19 GMT+7 ngày 2026-11-19, sau ký và push |
+| Giữ nguyên | `python -m lab10.criteria verify` đạt; không đổi JSON/lock sau ký |
+
+Phần A1–A4 được ghi trong commit chuẩn bị `efce192` trước commit ký và trước eval. A5 chỉ cập nhật bằng chứng ký/push sau thao tác thực tế; không thay ngưỡng.

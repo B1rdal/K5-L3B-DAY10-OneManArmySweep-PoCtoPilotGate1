@@ -1,8 +1,10 @@
 {
-  "team": "",
-  "members": [],
+  "team": "K5-L3B-DAY10-OneManArmySweep-PoCtoPilotGate1",
+  "members": [
+    "DaoDucSon-2A202604105"
+  ],
   "incident": "",
-  "decision_v1": "",
+  "decision_v1": "Tiếp tục",
   "decision_v2": "",
   "three_lines": {
     "environment_assumption": "",

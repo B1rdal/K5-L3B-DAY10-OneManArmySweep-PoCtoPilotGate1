@@ -1,0 +1,44 @@
+{
+  "round": 1,
+  "team": "K5-L3B-DAY10-OneManArmySweep-PoCtoPilotGate1",
+  "criteria": {
+    "ok": true,
+    "hash": "b6419b563a924d481a350f5835a79b2e78f3a895ec0386eb2e4759674d483716",
+    "signed_hash": "b6419b563a924d481a350f5835a79b2e78f3a895ec0386eb2e4759674d483716",
+    "expect_hash": null,
+    "problem": null,
+    "signed_at": "2026-11-19T15:17:04"
+  },
+  "criteria_git_history": [
+    true,
+    "tiêu chí giữ nguyên từ commit 'Sign acceptance criteria'",
+    ""
+  ],
+  "locked_files": {
+    "ok": true,
+    "changed": [],
+    "manifest": "MANIFEST.json"
+  },
+  "checkpoint": {
+    "ok": true,
+    "taken": true,
+    "hash": "244f5db13a65992b6819e535ee396d9afc1db9dc061e31854e0dd2314128becc",
+    "problem": null,
+    "taken_at": "2026-11-19T15:30:24"
+  },
+  "current_code_hash": "6ab0ad87e052df30b1edc7c1765582725a0163687a78c6d1679ca02ad96243be",
+  "prepared_code_hash": "6ab0ad87e052df30b1edc7c1765582725a0163687a78c6d1679ca02ad96243be",
+  "baseline_run_id": "R-base-before-20261119-152719-bde05c",
+  "final_after_run_id": "R-base-after-20261119-152822-6ab0ad",
+  "prepared_run_id": "R-base-prepared-20261119-153024-6ab0ad",
+  "newly_failed": [],
+  "public_tests_passed": 13,
+  "additional_development_tests_passed": 9,
+  "adhoc_cases_run": 2,
+  "decision_v1": "Tiếp tục",
+  "decision_scope": "Continue offline preparation into assigned incident evaluation; no live-customer approval.",
+  "official_evaluation_runs_preserved": 5,
+  "trace_files_preserved": 550,
+  "windows_line_ending_repair": "19 locked files restored byte-for-byte from original HEAD blobs after checking only CRLF/LF differed; no source/fixture semantics changed.",
+  "round2_complete": false
+}

@@ -26,7 +26,7 @@ Người học cung cấp đề, yêu cầu Codex thực hiện vòng 1, xác nh
 
 ### Bằng chứng
 
-Xem Phiếu A mục A5 (commit tiêu chí), Phiếu B mục B0/B8 (run ID và checkpoint); bản tổng hợp vòng 1 sẽ ghi đường dẫn report và các kiểm tra thực tế.
+Xem Phiếu A mục A5 (commit tiêu chí), Phiếu B mục B0/B8 (run ID và checkpoint); bản tổng hợp là `submission/round1/README.md`. Commit ký `21cf02d`; checkpoint `244f5db1`; baseline `R-base-before-20261119-152719-bde05c`; prepared `R-base-prepared-20261119-153024-6ab0ad`. Kết quả:110/110,13public tests và9probes; report/trace/journal thực tế trong `submission/round1/runs/` và `checks/`.
 
 ### Exit ticket
 
